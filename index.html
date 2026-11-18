@@ -1,0 +1,53 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Name Plate Maker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <h2></h2>
+
+    <div id="myBox" contenteditable="true">Welcome</div>
+
+    <div class="main-controls">
+        <div>
+            <h4>Box Color</h4>
+            <button class="circle" style="background-color: lightyellow;" onclick="changeBg('lightyellow')"></button>
+            <button class="circle" style="background-color: lightgreen;" onclick="changeBg('lightgreen')"></button>
+            <button class="circle" style="background-color: pink;" onclick="changeBg('pink')"></button>
+        </div>
+
+        <div>
+            <h4>Writing Color</h4>
+            <button class="circle" style="background-color: black;" onclick="changeText('black')"></button>
+            <button class="circle" style="background-color: purple;" onclick="changeText('purple')"></button>
+            <button class="circle" style="background-color: brown;" onclick="changeText('brown')"></button>
+        </div>
+
+        <div>
+            <h4>Text Style</h4>
+            <button class="f-btn" onclick="changeFont('Verdana')">Verdana</button>
+            <button class="f-btn" onclick="changeFont('Georgia')">Georgia</button>
+        </div>
+    </div>
+
+    <script>
+        var box = document.getElementById("myBox");
+
+        function changeBg(colorName) {
+            box.style.backgroundColor = colorName;
+        }
+
+        function changeText(textColor) {
+            box.style.color = textColor;
+        }
+
+        function changeFont(fontName) {
+            box.style.fontFamily = fontName;
+        }
+    </script>
+
+</body>
+</html>
